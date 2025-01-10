@@ -1,0 +1,110 @@
+[
+    {
+        "productId": 1,
+        "supplierId": 2,
+        "itemNumber" : "A1001",
+        "price": 70.00
+    },
+    {
+        "productId": 2,
+        "supplierId": 1,
+        "itemNumber" : "A2002",
+        "price": 10.48
+    },
+    {
+        "productId": 2,
+        "supplierId": 5,
+        "itemNumber" : "VM111",
+        "price": 11.62
+    },
+    {
+        "productId": 3,
+        "supplierId": 3,
+        "itemNumber" : "A3003",
+        "price": 13.25
+    },
+    {
+        "productId": 3,
+        "supplierId": 4,
+        "itemNumber" : "A333",
+        "price": 15.10
+    },
+    {
+        "productId": 4,
+        "supplierId": 2,
+        "itemNumber" : "A4004",
+        "price": 17.48
+    },
+    {
+        "productId": 5,
+        "supplierId": 3,
+        "itemNumber" : "A5005",
+        "price": 129.90
+    },
+    {
+        "productId": 5,
+        "supplierId": 4,
+        "itemNumber" : "A555",
+        "price": 132.00
+    },
+    {
+        "productId": 6,
+        "supplierId": 2,
+        "itemNumber" : "A6006",
+        "price": 146.88
+    },
+    {
+        "productId": 7,
+        "supplierId": 1,
+        "itemNumber" : "A7007",
+        "price": 15.97
+    },
+    {
+        "productId": 7,
+        "supplierId": 2,
+        "itemNumber" : "M7772",
+        "price": 16.15
+    },
+    {
+        "productId": 8,
+        "supplierId": 2,
+        "itemNumber" : "A8008",
+        "price": 194.75
+    },
+    {
+        "productId": 9,
+        "supplierId": 2,
+        "itemNumber" : "A9009",
+        "price": 30.00
+    },
+    {
+        "productId": 10,
+        "supplierId": 2,
+        "itemNumber" : "B1001",
+        "price": 336.36
+    },
+    {
+        "productId": 11,
+        "supplierId": 2,
+        "itemNumber" : "B2002",
+        "price": 121.88
+    },
+    {
+        "productId": 12,
+        "supplierId": 2,
+        "itemNumber" : "B3003",
+        "price": 28.25
+    },
+    {
+        "productId": 13,
+        "supplierId": 2,
+        "itemNumber" : "B4004",
+        "price": 84.75
+    },
+    {
+        "productId": 14,
+        "supplierId": 2,
+        "itemNumber" : "B5005",
+        "price": 39.90
+    }
+]
