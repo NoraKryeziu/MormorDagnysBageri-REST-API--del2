@@ -1,0 +1,72 @@
+[
+    {
+        "itemNumber": "A1001",
+        "name": "Jäst",
+        "price": 70.00
+    },
+    {
+        "itemNumber": "A2002",
+        "name": "Vetemjöl",
+        "price": 10.48
+    },
+    {
+        "itemNumber": "A3003",
+        "name": "Mjölk",
+        "price": 13.25
+    },
+    {
+        "itemNumber": "A4004",
+        "name": "Strösocker",
+        "price": 17.48
+    },
+    {
+        "itemNumber": "A5005",
+        "name": "Smör",
+        "price": 129.90
+    },
+    {
+        "itemNumber": "A6006",
+        "name": "Vaniljsocker",
+        "price": 146.88
+    },
+    {
+        "itemNumber": "A7007",
+        "name": "Havregryn",
+        "price": 15.97
+    },
+    {
+        "itemNumber": "A8008",
+        "name": "Kakao",
+        "price": 194.75
+    },
+    {
+        "itemNumber": "A9009",
+        "name": "Ljus sirap",
+        "price": 30.00
+    },
+    {
+        "itemNumber": "B1001",
+        "name": "Kanel",
+        "price": 336.36
+    },
+    {
+        "itemNumber": "B2002",
+        "name": "Bakpulver",
+        "price": 121.88
+    },
+    {
+        "itemNumber": "B3003",
+        "name": "Salt",
+        "price": 28.25
+    },
+    {
+        "itemNumber": "B4004",
+        "name": "Kokos",
+        "price": 84.75
+    },
+    {
+        "itemNumber": "B5005",
+        "name": "Pärlsocker",
+        "price": 39.90
+    }
+]

@@ -1,72 +1,62 @@
 [
     {
-        "itemNumber": "A1001",
-        "productName": "Jäst",
-        "price": 70.00
+        "id":1,
+        "itemNumber": "CHS-001",
+        "name": "Chokladsnittar",
+        "pricePerUnit": 2.995,
+        "weight": 250.0,
+        "quantityPerPack":10,
+        "expireDate": "2025-02-14",
+        "manufactureDate":"2025-02-01"
     },
     {
-        "itemNumber": "A2002",
-        "productName": "Vetemjöl",
-        "price": 10.48
+        "id":2,
+        "itemNumber": "CHB-002",
+        "name": "Chokladbollar",
+        "pricePerUnit": 4.16,
+        "weight": 200.0,
+        "quantityPerPack":6,
+        "expireDate": "2025-02-14",
+        "manufactureDate":"2025-02-01"
     },
     {
-        "itemNumber": "A3003",
-        "productName": "Mjölk",
-        "price": 13.25
+        "id":3,
+        "itemNumber": "KOL-003",
+        "name": "Kolasnittar",
+        "pricePerUnit": 2.995,
+        "weight": 250.0,
+        "quantityPerPack":10,
+        "expireDate": "2025-02-14",
+        "manufactureDate":"2025-02-01"
     },
     {
-        "itemNumber": "A4004",
-        "productName": "Strösocker",
-        "price": 17.48
+        "id":4,
+        "itemNumber": "KAN-004",
+        "name": "Kanelbullar",
+        "pricePerUnit": 4.0,
+        "weight": 500.0,
+        "quantityPerPack":10,
+        "expireDate": "2025-02-07",
+        "manufactureDate":"2025-02-01"
     },
     {
-        "itemNumber": "A5005",
-        "productName": "Smör",
-        "price": 129.90
+        "id":5,
+        "itemNumber": "FRN-005",
+        "name": "Franskbröd",
+        "pricePerUnit": 9.98,
+        "weight": 1000.0,
+        "quantityPerPack":5,
+        "expireDate": "2025-02-01",
+        "manufactureDate":"2025-02-03"
     },
     {
-        "itemNumber": "A6006",
-        "productName": "Vaniljsocker",
-        "price": 146.88
-    },
-    {
-        "itemNumber": "A7007",
-        "productName": "Havregryn",
-        "price": 15.97
-    },
-    {
-        "itemNumber": "A8008",
-        "productName": "Kakao",
-        "price": 194.75
-    },
-    {
-        "itemNumber": "A9009",
-        "productName": "Ljus sirap",
-        "price": 30.00
-    },
-    {
-        "itemNumber": "B1001",
-        "productName": "Kanel",
-        "price": 336.36
-    },
-    {
-        "itemNumber": "B2002",
-        "productName": "Bakpulver",
-        "price": 121.88
-    },
-    {
-        "itemNumber": "B3003",
-        "productName": "Salt",
-        "price": 28.25
-    },
-    {
-        "itemNumber": "B4004",
-        "productName": "Kokos",
-        "price": 84.75
-    },
-    {
-        "itemNumber": "B5005",
-        "productName": "Pärlsocker",
-        "price": 39.90
+        "id":6,
+        "itemNumber": "FRA-006",
+        "name": "Frallor",
+        "pricePerUnit": 3.998,
+        "weight": 1000.0,
+        "quantityPerPack":20,
+        "expireDate": "2025-02-01",
+        "manufactureDate":"2025-02-03"
     }
 ]

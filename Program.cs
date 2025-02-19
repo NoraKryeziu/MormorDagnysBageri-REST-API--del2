@@ -1,6 +1,9 @@
 using Microsoft.Extensions.Options;
 using mormordagnysbageri_del1_api.Data;
 using Microsoft.EntityFrameworkCore;
+using mormordagnysbageri_del1_api;
+using mormordagnysbageri_del1_api.Interfaces;
+using mormordagnysbageri_del1_api.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,11 +12,16 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DevConnection"));
 });
 
+builder.Services.AddScoped<ICustomerRespository, CustomerRepository>();
+builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
 using var scope = app.Services.CreateScope();
+
 try
 {
     var services = scope.ServiceProvider;
@@ -22,9 +30,18 @@ try
 
     await context.Database.MigrateAsync();
 
-    await Seed.LoadProducts(context);
+    await Seed.LoadAddressTypes(context);
+    await Seed.LoadPostalAddresses(context);
+    await Seed.LoadAddresses(context);
+    await Seed.LoadIngredients(context);
     await Seed.LoadSuppliers(context);
-    await Seed.LoadSupplierProducts(context);
+    await Seed.LoadSupplierAddresses(context);
+    await Seed.LoadSupplierIngredients(context);
+    await Seed.LoadCustomers(context);
+    await Seed.LoadCustomerAddresses(context);
+    await Seed.LoadProducts(context);
+    await Seed.LoadSalesOrders(context);
+    await Seed.LoadOrderItems(context);
    
 }
 catch (Exception ex)

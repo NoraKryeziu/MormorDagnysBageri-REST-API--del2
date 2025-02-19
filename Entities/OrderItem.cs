@@ -1,11 +1,11 @@
 namespace mormordagnysbageri_del1_api.Entities;
-public class SupplierProduct
-{
-    public int ProductId { get; set; }
-    public int SupplierId { get; set; }
-    public string ItemNumber { get; set; }
-    public decimal Price { get; set; }
 
+public class OrderItem
+{
+    public int OrderId { get; set; }
+    public int ProductId { get; set; }
+    public int Quantity { get; set; }
+    public decimal Price { get; set; }
     public Product Product { get; set; }
-    public Supplier Supplier { get; set; }
-} 
+    public SalesOrder Order { get; set; }
+}

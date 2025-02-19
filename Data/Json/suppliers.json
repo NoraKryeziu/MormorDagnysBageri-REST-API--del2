@@ -1,35 +1,30 @@
 [
     {
-        "supplierName":"Lantmännen",
-        "address":"S:t Göransgatan 160 A, 104 25 Stockholm",
+        "name":"Lantmännen",
         "contactPerson": "Göran Svensson",
         "phone": "010-556 00 00",
         "email": "info@lantmannen.com"
     },
     {
-        "supplierName":"Menigo",
-        "address":"Lagergatan 1, 721 28 Västerås",
+        "name":"Menigo",
         "contactPerson": "Eva Göransson",
         "phone": "020-443 10 20",
-        "email": "info@menigo.com"
+        "email": "info@menigo.com"  
     },
     {
-        "supplierName":"Skånemejerier",
-        "address":"Skånegatan 2, 242 Malmö",
+        "name":"Skånemejerier",
         "contactPerson": "Lena Larsson",
         "phone": "040-619 30 00",
         "email": "skane@mejerier.com"
     },
     {
-        "supplierName":"Arla",
-        "address":"Rättarvägen 3, 169 68 Solna",
+        "name":"Arla",
         "contactPerson": "Jörgen Karlsson",
         "phone": "020-99 66 99",
         "email": "info@arla.com"
     },    
     {
-        "supplierName":"Berte Qvarn",
-        "address":"Bertevägen, 311 67  Slöinge",
+        "name":"Berte Qvarn",
         "contactPerson": "Cecilia Mobjer",
         "phone": "0346-71 52 02",
         "email": "info@berteqvarn.se"

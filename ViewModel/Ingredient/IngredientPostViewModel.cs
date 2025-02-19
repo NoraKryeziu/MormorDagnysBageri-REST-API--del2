@@ -2,10 +2,10 @@ using mormordagnysbageri_del1_api.Entities;
 
 namespace mormordagnysbageri_del1_api.ViewModel;
 
-public class ProductPostViewModel
+public class IngredientPostViewModel
 {
     public string ItemNumber { get; set; }
-    public string ProductName { get; set; }
+    public string Name { get; set; }
     public decimal Price { get; set; }
     public int SupplierId { get; set; }
 

@@ -16,19 +16,19 @@ public class SuppliersController(DataContext context) : ControllerBase
     public async Task<ActionResult> ListAllSuppliers()
     {
         var supplier = await _context.Suppliers
-        .Include(sp => sp.SupplierProducts)
+        .Include(sp => sp.SupplierIngredients)
         .Select(supplier => new
         {
-            supplier.SupplierName,
+            supplier.Name,
             supplier.ContactPerson,
             supplier.Email,
             supplier.Phone,
-            Products = supplier.SupplierProducts
-                .Select(supplierProduct => new
+            Products = supplier.SupplierIngredients
+                .Select(c => new
                 {
-                    supplierProduct.Product.ProductName,
-                    supplierProduct.ItemNumber,
-                    supplierProduct.Price
+                    c.Ingredient.Name,
+                    c.ItemNumber,
+                    c.Price
                 })
         })
         .ToListAsync();
@@ -39,20 +39,20 @@ public class SuppliersController(DataContext context) : ControllerBase
     public async Task<ActionResult> FindSupplier(int id)
     {
         var supplier = await _context.Suppliers
-        .Where(s => s.SupplierId == id)
-        .Include(sp => sp.SupplierProducts)
+        .Where(s => s.Id == id)
+        .Include(sp => sp.SupplierIngredients)
         .Select(supplier => new
         {
-            supplier.SupplierName,
+            supplier.Name,
             supplier.ContactPerson,
             supplier.Email,
             supplier.Phone,
-            Products = supplier.SupplierProducts
-                .Select(supplierProduct => new
+            Ingredient = supplier.SupplierIngredients
+                .Select(c => new
                 {
-                    supplierProduct.Product.ProductName,
-                    supplierProduct.ItemNumber,
-                    supplierProduct.Price
+                    c.Ingredient.Name,
+                    c.ItemNumber,
+                    c.Price
                 })
         })
         .SingleOrDefaultAsync();

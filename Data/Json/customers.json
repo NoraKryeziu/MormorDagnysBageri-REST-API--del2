@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "name":"Coop ",
+        "phone":"010-741 67 20",
+        "email":"coop@gmail.com",
+        "contactPerson": "Anna Andersson"
+    },
+    {
+        "id":2,
+        "name":"Ica Maxi",
+        "phone":"040 6601600",
+        "email":"icamaxi@gmail.com",
+        "contactPerson": "Sara Karlsson"
+    }
+
+]

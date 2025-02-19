@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "addressTypeId": 3,
+        "addressLine": "S:t Göransgatan 160 A",
+        "postalAddressId": 1
+    },
+    {
+        "id": 2,
+        "addressTypeId": 3,
+        "addressLine": "Lagergatan 1",
+        "postalAddressId": 2
+    },
+    {
+        "id": 3,
+        "addressTypeId": 3,
+        "addressLine": "Skånegatan 2",
+        "postalAddressId": 3
+    },
+    {
+        "id": 4,
+        "addressTypeId": 3,
+        "addressLine": "Rättarvägen 3",
+        "postalAddressId": 4
+    },
+    {
+        "id": 5,
+        "addressTypeId": 3,
+        "addressLine": "Bertevägen",
+        "postalAddressId": 5
+    },
+    {
+        "id": 6,
+        "addressTypeId": 1,
+        "addressLine": "Norra Parkgatan 1",
+        "postalAddressId": 6
+    },
+    {
+        "id": 7,
+        "addressTypeId": 1,
+        "addressLine": "Masttorget 12",
+        "postalAddressId": 7
+    }
+]
