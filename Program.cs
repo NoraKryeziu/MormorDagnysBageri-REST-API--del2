@@ -7,9 +7,13 @@ using mormordagnysbageri_del1_api.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var serverVersion = new MySqlServerVersion(new Version(9, 1, 0));
+
 builder.Services.AddDbContext<DataContext>(options =>
 {
-    options.UseSqlite(builder.Configuration.GetConnectionString("DevConnection"));
+    //options.UseSqlite(builder.Configuration.GetConnectionString("DevConnection"));
+    options.UseMySql(builder.Configuration.GetConnectionString("MySQL"), serverVersion);
+    
 });
 
 builder.Services.AddScoped<ICustomerRespository, CustomerRepository>();
