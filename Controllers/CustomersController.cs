@@ -68,4 +68,33 @@ public class CustomersController(IUnitOfWork unitOfWork) : ControllerBase
             return BadRequest(ex.Message);
         }
     }
+
+    [HttpPatch("{id}/contactPerson")]
+    public async Task<IActionResult> Update(int id, CustomerBaseViewModel model)
+    {
+        try
+        {
+            if(await _unitOfWork.CustomerRepository.Update(id, model))
+            {
+                if (_unitOfWork.HasChanges())
+                {
+                    await _unitOfWork.Complete();
+                    return NoContent();
+                }
+                else 
+                {
+                    return StatusCode(500);
+                }
+            }
+            else
+            {
+                return StatusCode(500);
+            }
+        }
+        catch (Exception ex)
+        {
+            
+            return BadRequest(ex.Message);
+        }
+    }
 }

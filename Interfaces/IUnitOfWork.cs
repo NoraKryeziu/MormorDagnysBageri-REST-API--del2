@@ -5,6 +5,8 @@ public interface IUnitOfWork
     ICustomerRespository CustomerRepository { get; }
     IAddressRepository AddressRepository { get; }
     IProductRepository ProductRepository { get; }
+    IOrderRepository OrderRepository { get; }
+    IOrderItemRepository OrderItemRepository { get; }
 
     Task<bool> Complete();
     bool HasChanges();

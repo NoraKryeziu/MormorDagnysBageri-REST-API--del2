@@ -308,7 +308,7 @@ namespace mormordagnysbageri_del1_api.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("mormordagnysbageri_del1_api.Entities.Product", "Product")
-                        .WithMany()
+                        .WithMany("OrderItems")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -394,6 +394,11 @@ namespace mormordagnysbageri_del1_api.Data.Migrations
             modelBuilder.Entity("mormordagnysbageri_del1_api.Entities.PostalAddress", b =>
                 {
                     b.Navigation("Addresses");
+                });
+
+            modelBuilder.Entity("mormordagnysbageri_del1_api.Entities.Product", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("mormordagnysbageri_del1_api.Entities.SalesOrder", b =>

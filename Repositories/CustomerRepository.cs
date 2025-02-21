@@ -21,7 +21,7 @@ public class CustomerRepository(DataContext context, IAddressRepository repo) : 
 
         try
         {
-            if(await _context.Customers.FirstOrDefaultAsync(c => c.Email.ToLower().Trim() == model.Email.ToLower().Trim() )!= null)
+            if (await _context.Customers.FirstOrDefaultAsync(c => c.Email.ToLower().Trim() == model.Email.ToLower().Trim()) != null)
             {
                 throw new MDBException("Kunden finns redan");
             }
@@ -36,7 +36,7 @@ public class CustomerRepository(DataContext context, IAddressRepository repo) : 
 
             await _context.AddAsync(customer);
 
-            foreach(var a in model.Addresses)
+            foreach (var a in model.Addresses)
             {
                 var address = await _repo.Add(a);
                 await _context.CustomerAddresses.AddAsync(new CustomerAddress
@@ -49,7 +49,7 @@ public class CustomerRepository(DataContext context, IAddressRepository repo) : 
         }
         catch (Exception ex)
         {
-            
+
             throw new Exception(ex.Message);
         }
     }
@@ -108,6 +108,7 @@ public class CustomerRepository(DataContext context, IAddressRepository repo) : 
 
                 var orderView = new SalesOrderViewModel
                 {
+                    CustomerName = customer.Name,
                     OrderId = order.OrderId,
                     OrderDate = order.OrderDate
                 };
@@ -167,8 +168,26 @@ public class CustomerRepository(DataContext context, IAddressRepository repo) : 
         }
         catch (Exception ex)
         {
-            throw new Exception($"Ett fel uppstod{ex.Message}" );
+            throw new Exception($"Ett fel uppstod{ex.Message}");
         }
 
+    }
+
+    public async Task<bool> Update(int id, CustomerBaseViewModel model)
+    {
+        try
+        {
+            var result = await _context.Customers
+            .Where(c => c.Id == id)
+            .FirstOrDefaultAsync();
+
+            result.ContactPerson = model.ContactPerson;
+
+            return true;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
     }
 }

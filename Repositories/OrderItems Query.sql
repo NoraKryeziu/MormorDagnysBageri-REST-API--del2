@@ -1,1 +1,0 @@
-SELECT * FROM OrderItems WHERE OrderId = 2;
