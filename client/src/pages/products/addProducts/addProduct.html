@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lägg till produkt</title>
+    <link rel="stylesheet" href="addProduct.css" />
+    <link rel="stylesheet" href="../../../assets/css/site.css" />
+    <link rel="stylesheet" href="../../../assets/css/add.css" />
+    <script type="module" src="addProduct.js"></script>
+</head>
+<body>
+   <header>
+            <nav>
+                <div class="container">
+                    <ul class="menu">
+                        <li class="logo">
+                            <a href="#">Mormor Dagnys Bageri</a>
+                        </li>
+                        <li class="toggle">
+                            <input
+                                type="checkbox"
+                                id="menu-btn"
+                                class="menu-btn" />
+                            <label for="menu-btn" class="menu-icon">
+                                <span class="nav-icon"></span>
+                            </label>
+                        </li>
+                        <li class="menu-item">
+                            <a href="../../../index.html">Start</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="../../customers/listAllCustomers/customers.html">Kunder</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="../../products/listAllProducts/products.html">Produkter</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="../../suppliers/suppliers.html">Leverantörer</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="../../orders/orders.html">Beställningar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+  <main>
+    <article class="add-title">
+        <h1>Lägg till ny produkt</h1>
+      </article>
+    <form id="form">
+      <label>
+        Produktnamn:
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Artikelnummer:
+        <input type="text" name="itemNumber" required />
+      </label>
+      <label>
+        Pris per enhet:
+        <input type="number" name="pricePerUnit" required />
+      </label>
+      <label>
+        Antal per förpackning:
+        <input type="number" name="quantityPerPack" required />
+      </label>
+      <button type="submit">Lägg till</button>
+    </form>
+    <p id="feedback"></p>
+  </main>
+</body>
+</html>

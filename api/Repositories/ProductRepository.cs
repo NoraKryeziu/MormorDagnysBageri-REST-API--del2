@@ -117,6 +117,7 @@ public class ProductRepository(DataContext context) : IProductRepository
             {
                 var view = new ProductsViewModel
                 {
+                    Id = product.Id,
                     ItemNumber = product.ItemNumber,
                     Name = product.Name,
                     PricePerUnit = product.PricePerUnit,

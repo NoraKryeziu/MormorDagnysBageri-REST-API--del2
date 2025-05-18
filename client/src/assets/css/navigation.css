@@ -1,0 +1,122 @@
+nav {
+    padding: 0;
+    background: #604141;
+    opacity: 0.9;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li.logo {
+    font-size: 1.4rem;
+}
+
+nav ul li.logo a {
+    color: hsl(194, 85%, 92%);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul li.toggle {
+    order: 1;
+}
+
+nav ul li.menu-item {
+    width: 100%;
+    text-align: center;
+    order: 2;
+    display: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.4rem;
+    color: #f4f4f4;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul li.menu-item:hover {
+    background: #4f2d2d;
+    color: #f4f4f4;
+}
+nav ul li a.active {
+    color: #f69999f1;
+}
+
+nav ul:has(li .menu-btn:checked) .menu-item {
+    display: block;
+}
+
+nav ul li .menu-btn {
+    display: none;
+}
+
+nav ul li .menu-icon {
+    padding: 28px 20px;
+    cursor: pointer;
+}
+
+nav ul li .menu-icon .nav-icon {
+    background: #f4f4f4;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+}
+
+nav ul li .menu-icon .nav-icon:before,
+nav ul li .menu-icon .nav-icon:after {
+    background-color: #f4f4f4;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+}
+
+nav ul li .menu-icon .nav-icon:before {
+    top: -5px;
+}
+
+nav ul li .menu-icon .nav-icon:after {
+    top: 5px;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+nav ul li .menu-btn:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-wrap: nowrap;
+    }
+
+    nav ul li.menu-item {
+        display: block;
+        width: auto;
+    }
+
+    nav ul li.logo {
+        flex-grow: 1;
+    }
+
+    nav ul li.toggle {
+        display: none;
+    }
+}

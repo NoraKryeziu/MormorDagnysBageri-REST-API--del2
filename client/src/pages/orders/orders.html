@@ -1,0 +1,80 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./orders.css" />
+    <script type="module" src="./orders.js"></script>
+    <title>Beställningar</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <ul class="menu">
+            <li class="logo">
+              <a href="#">Mormor Dagnys Bageri</a>
+            </li>
+            <li class="toggle">
+              <input type="checkbox" id="menu-btn" class="menu-btn" />
+              <label for="menu-btn" class="menu-icon">
+                <span class="nav-icon"></span>
+              </label>
+            </li>
+            <li class="menu-item">
+              <a href="../../index.html">Start</a>
+            </li>
+            <li class="menu-item">
+              <a href="../customers/listAllCustomers/customers.html">Kunder</a>
+            </li>
+            <li class="menu-item">
+              <a href="../products/listAllProducts/products.html">Produkter</a>
+            </li>
+            <li class="menu-item">
+              <a href="../suppliers/suppliers.html">Leverantörer</a>
+            </li>
+            <li class="menu-item">
+              <a class="active" href="../../orders/orders.html"
+                >Beställningar</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="order-list">
+        <h1>Beställningar</h1>
+        <article>
+          <ul id="orders"></ul>
+        </article>
+      </section>
+      <section class="order-form">
+        <article class="add-title">
+          <h1>Lägg till ny order</h1>
+        </article>
+        <form id="form">
+          <label>
+            Kund:
+            <select id="customerId" name="customerId" required>
+              <option value="">-- Välj kund --</option>
+            </select>
+          </label>
+
+          <h3>Produkter</h3>
+          <div id="order-items"></div>
+
+          <button type="button" id="add-item">Lägg till produkt</button>
+
+          <p>
+            <strong>Totalt pris: <span id="total-price">0.00</span> kr</strong>
+          </p>
+          <button type="submit" id="submit-order">Skicka beställning</button>
+        </form>
+      </section>
+      <p id="feedback"></p>
+    </main>
+  </body>
+</html>

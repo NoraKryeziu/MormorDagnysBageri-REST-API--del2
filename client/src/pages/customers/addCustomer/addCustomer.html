@@ -1,0 +1,98 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lägg till kund</title>
+    <link rel="stylesheet" href="../../../assets/css/add.css" />
+    <link rel="stylesheet" href="../../../assets/css/site.css" />
+    <script type="module" src="addCustomer.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <ul class="menu">
+            <li class="logo">
+              <a href="#">Mormor Dagnys Bageri</a>
+            </li>
+            <li class="toggle">
+              <input type="checkbox" id="menu-btn" class="menu-btn" />
+              <label for="menu-btn" class="menu-icon">
+                <span class="nav-icon"></span>
+              </label>
+            </li>
+            <li class="menu-item">
+              <a href="../../../index.html">Start</a>
+            </li>
+            <li class="menu-item">
+              <a href="../../customers/listAllCustomers/customers.html"
+                >Kunder</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="../../products/listAllProducts/products.html"
+                >Produkter</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="../../suppliers/suppliers.html">Leverantörer</a>
+            </li>
+            <li class="menu-item">
+              <a href="../../orders/orders.html"
+                >Beställningar</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article class="add-title">
+        <h1>Lägg till ny kund</h1>
+      </article>
+      <form id="form">
+        <label>
+          Namn:
+          <input type="text" id="name" name="name" required />
+        </label>
+        <label>
+          E-post:
+          <input type="text" id="email" name="email" required />
+        </label>
+        <label>
+          Telefon:
+          <input type="text" id="phone" name="phone" required />
+        </label>
+        <label>
+          Kontakt person:
+          <input type="text" id="contactPerson" name="contactPerson" required />
+        </label>
+        <label>
+          Adress:
+          <input type="text" id="addressLine" name="addressLine" required />
+        </label>
+        <label>
+          Postnummer:
+          <input type="text" id="postalCode" name="postalCode" required />
+        </label>
+        <label>
+          Stad:
+          <input type="text" id="city" name="city" required />
+        </label>
+        <label>
+          Adresstyp:
+          <select id="addressType" name="addressType" required>
+            <option value="Delivery">Leveransadress</option>
+            <option value="Invoice">Fakturaadress</option>
+            <option value="Distribution">Distribution</option>
+          </select>
+        </label>
+        <button type="submit">Lägg till</button>
+      </form>
+      <p id="feedback"></p>
+    </main>
+  </body>
+</html>

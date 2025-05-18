@@ -16,6 +16,15 @@ builder.Services.AddDbContext<DataContext>(options =>
     
 });
 
+builder.Services.AddCors(options => {
+    options.AddDefaultPolicy(policy => {
+        policy.WithOrigins("*")
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
+
+
 builder.Services.AddScoped<ICustomerRespository, CustomerRepository>();
 builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
@@ -56,6 +65,7 @@ catch (Exception ex)
     throw;
 }
 
+app.UseCors();
 
 app.MapControllers();
 

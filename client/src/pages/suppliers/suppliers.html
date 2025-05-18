@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./suppliers.css" />
+    <script type="module" src="./suppliers.js"></script>
+    <title>Leverantörer</title>
+  </head>
+  <body>
+     <header>
+            <nav>
+                <div class="container">
+                    <ul class="menu">
+                        <li class="logo">
+                            <a href="#">Mormor Dagnys Bageri</a>
+                        </li>
+                        <li class="toggle">
+                            <input
+                                type="checkbox"
+                                id="menu-btn"
+                                class="menu-btn" />
+                            <label for="menu-btn" class="menu-icon">
+                                <span class="nav-icon"></span>
+                            </label>
+                        </li>
+                        <li class="menu-item">
+                            <a href="../../index.html">Start</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="../customers/listAllCustomers/customers.html">Kunder</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="../products/listAllProducts/products.html"
+                            >Produkter</a
+                            >
+                        </li>
+                        <li class="menu-item">
+                            <a class="active" href="./suppliers.html"
+                                >Leverantörer</a
+                            >
+                        </li>
+                        <li class="menu-item">
+                            <a href="../orders/orders.html">Beställningar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <main>
+      <h1>Våra leverantörer</h1>
+      <article>
+        <section>
+          <ul id="suppliers"></ul>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
